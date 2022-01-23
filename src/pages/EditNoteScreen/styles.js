@@ -7,15 +7,15 @@ export const Container = styled.View`
 export const TitleInput = styled.TextInput`
     font-size: 20px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
     padding: 15px;
 `;
 export const BodyInput = styled.TextInput`
     flex: 1px;
     padding: 15px;
     font-size: 15px;
-    color: #fff;
-    background-color: #333;
+    color: #000;
+    background-color: #fff;
 `;
 export const SaveButton = styled.TouchableHighlight`
     margin-right: 15px;

@@ -7,12 +7,13 @@ import {
     TitleInput,
     BodyInput,
     SaveButton,
-    SaveButtonImage,
     CloseButton,
-    CloseButtonImage,
     DeleteButton,
     DeleteButtonText
 } from './styles';
+
+import SaveButtonImage from 'react-native-vector-icons/MaterialCommunityIcons';
+import CloseButtonImage from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default () => {
 
@@ -39,12 +40,12 @@ export default () => {
             title: status == 'new' ? 'Nova Anotação' : 'Editar Anotação',
             headerLeft: () => (
                 <CloseButton underlayColor="transparent" onPress={handleCloseButton}>
-                    <CloseButtonImage source={require('../../assets/close.png')}/>
+                    <CloseButtonImage name="close" size={30}/>
                 </CloseButton>
             ),
             headerRight: () => (
                 <SaveButton underlayColor="transparent" onPress={handleSaveButton}>
-                    <SaveButtonImage source={require('../../assets/save.png')}/>
+                    <SaveButtonImage name="content-save-edit-outline" size={30}/>
                 </SaveButton>
             )
         });
@@ -96,14 +97,14 @@ export default () => {
             value={title}
             onChangeText={t=>setTitle(t)}
             placeholder="Digite um título da anotação"
-            placeholderTextColor="#000"
+            placeholderTextColor="#CBCACA"
             autoFocus={true}
         />
         <BodyInput
             value={body}
             onChangeText={t=>setBody(t)}
             placeholder="Digite o corpo da anotação"
-            placeholderTextColor="#000"
+            placeholderTextColor="#CBCACA"
             multiline={true}
             textAlignVertical="top"
         />
